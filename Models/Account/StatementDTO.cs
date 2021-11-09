@@ -9,7 +9,8 @@ namespace BankingGWService.Models.Account
         public string Type { get; set; }
         public int SourceAccountId { get; set; }
         public int TargerAccountId { get; set; }
-        public int Amount { get; set; }
+        public float AccountBalance { get; set; }
+        public float Amount { get; set; }
         public string TransactionStatus { get; set; }
         public DateTime Date { get; set; }
     }

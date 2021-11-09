@@ -1,16 +1,16 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: transactionsmicroservice
+  name: bankinggwservice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: TransactionsMicroservice
+      app: BankingGWService
   template:
     metadata:
       labels:
-        app: TransactionsMicroservice
+        app: BankingGWService
     spec:
       containers:
       - name: aksg3cr
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: transactionsmicroservice
+  name: bankinggwservice
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: TransactionsMicroservice
+    app: BankingGWService
